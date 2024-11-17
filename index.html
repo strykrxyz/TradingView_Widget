@@ -24,9 +24,11 @@
                 <span class="blue-text">Track all markets on TradingView</span>
             </a>
         </div>
-        <!-- Embed the TradingView Widget Script -->
-        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
-        {
+    </div>
+    
+    <!-- Embed the TradingView Widget Script -->
+    <script type="text/javascript">
+        new TradingView.widget({
             "width": "100%",                    /* Set width to 100% to make it responsive */
             "height": "600",                    /* Set a specific height to better control display size */
             "colorTheme": "dark",               /* Ensure dark theme matches the page */
@@ -34,9 +36,8 @@
             "locale": "en",                     /* Language setting for widget */
             "importanceFilter": "0,1",         /* Filter for event importance (0 and 1 level events) */
             "countryFilter": ["AU", "EU", "GB", "JP", "CH", "US"] /* List of countries to include in filter */
-        }
-        </script>
-    </div>
+        });
+    </script>
     <!-- TradingView Widget END -->
 </body>
 </html>
