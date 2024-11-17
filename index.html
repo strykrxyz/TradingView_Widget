@@ -11,37 +11,33 @@
             color: #ffffff;
             font-family: Arial, sans-serif;
         }
-        .tradingview-widget-container {
-            background-color: transparent; /* Ensure the widget container has a transparent background */
-        }
-        .blue-text {
-            color: #64b5f6; /* Lighter blue to meet contrast requirements */
-        }
     </style>
 </head>
 <body>
-    <main>
-        <!-- TradingView Widget BEGIN -->
-        <div class="tradingview-widget-container">
-            <div class="tradingview-widget-container__widget"></div>
-            <div class="tradingview-widget-copyright">
-                <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
-                    <span class="blue-text">Track all markets on TradingView</span>
-                </a>
-            </div>
-            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
-            {
-                "width": "100%",
-                "height": "600",
-                "colorTheme": "dark",
-                "isTransparent": true,
-                "locale": "en",
-                "importanceFilter": "0,1",
-                "countryFilter": ["AU", "EU", "GB", "JP", "CH", "US"]
-            }
-            </script>
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+        <!-- Widget Container -->
+        <div class="tradingview-widget-container__widget"></div>
+        <!-- Link to TradingView for compliance -->
+        <div class="tradingview-widget-copyright">
+            <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+                <span class="blue-text">Track all markets on TradingView</span>
+            </a>
         </div>
-        <!-- TradingView Widget END -->
-    </main>
+    </div>
+    
+    <!-- Embed the TradingView Widget Script -->
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
+    {
+        "width": "100%",                    /* Set width to 100% to make it responsive */
+        "height": "600",                    /* Set a specific height to better control display size */
+        "colorTheme": "dark",               /* Ensure dark theme matches the page */
+        "isTransparent": true,              /* Set transparency to blend into the background */
+        "locale": "en",                     /* Language setting for widget */
+        "importanceFilter": "0,1",          /* Filter for event importance (0 and 1 level events) */
+        "countryFilter": "AU,EU,GB,JP,CH,US" /* List of countries to include in filter, as a comma-separated string */
+    }
+    </script>
+    <!-- TradingView Widget END -->
 </body>
 </html>
