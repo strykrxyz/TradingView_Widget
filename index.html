@@ -11,6 +11,14 @@
             color: #ffffff;
             font-family: Arial, sans-serif;
         }
+        /* Widget container styling */
+        .tradingview-widget-container {
+            max-width: 800px; /* Optional max-width for the widget */
+            margin: 0 auto;    /* Center align the widget */
+        }
+        .blue-text {
+            color: #64b5f6; /* Light blue for better contrast */
+        }
     </style>
 </head>
 <body>
@@ -35,7 +43,7 @@
         "isTransparent": true,              /* Set transparency to blend into the background */
         "locale": "en",                     /* Language setting for widget */
         "importanceFilter": "0,1",          /* Filter for event importance (0 and 1 level events) */
-        "countryFilter": "AU,EU,GB,JP,CH,US" /* List of countries to include in filter, as a comma-separated string */
+        "countryFilter": ["AU", "EU", "GB", "JP", "CH", "US"] /* List of countries to include in filter */
     }
     </script>
     <!-- TradingView Widget END -->
